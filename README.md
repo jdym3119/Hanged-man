@@ -1,5 +1,4 @@
 # hanged man
-### Figure:
 This is a classic game where you have to guess a hidden word letter by letter before the hangman drawing is completed.
 Next I will show you the structure of the code.
 ```python
