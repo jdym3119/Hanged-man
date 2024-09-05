@@ -1,6 +1,6 @@
 # hanged man
 This is a classic game where you have to guess a hidden word letter by letter before the hangman drawing is completed.
-Next I will show you the structure of the code.
+This program was made in Python, next I will show you the structure of the code.
 ```python
 import random
 class HangedMan:
