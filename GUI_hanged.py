@@ -8,7 +8,7 @@ def display():
     word_label.config(text=game.getter_word())
     attempts_label.config(text=f"Attempts left: {game.getter_attempts()}")
     image_label.config(text=get_image(game.getter_attempts()))
-def guess():
+def guess(event=None):
     letter=letter_entry.get()
     if len(letter) == 1:
         if game.guess_letter(letter):
@@ -129,6 +129,7 @@ image_label=tk.Label(root,text=get_image(game.getter_attempts()),bg="#9ef7f5",fo
 image_label.pack(pady=20, anchor="center")
 letter_entry=tk.Entry(root,font=("Arial",16))
 letter_entry.pack(pady=20, anchor="center")
+letter_entry.bind("<Return>",guess)
 guess_button=tk.Button(root,text="Guess",command=guess,font=("Arial",16),bg="#2a7e7c")
 guess_button.pack(pady=10, anchor="center")
 reset_button=tk.Button(root,text="Reset",command=reset_game,font=("Arial",16),bg="#2a7e7c")
